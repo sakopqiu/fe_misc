@@ -2,7 +2,7 @@
 
 ## Background
 
-We tried to look back upon what we have done in the past and summarized all the best practices into an operationable manual here so that we can re-apply the same theory to future projects, e.g, TTCX.
+We tried to look back upon what we have done in the past and summarized all the best practices into an operationable manual here so that we can re-apply the same theory to future projects.
 Note that
 - This doc is a practiceable manual rather than an abstract and theoretical one, comprehensive examples will be given along the way, which is different from any SEO tutorial you've read before. 
 - What RDs need to do and what PMs need to cooperate with RD will be marked as red bold text.
@@ -24,7 +24,7 @@ The four pillars of SEO optimization consist of
 - Rendering => This step is optional. 
 This process is the hardest to understand even for engineers and the most unexplained one in normal tutorials and we will give concrete examples later. 
 In short, most of the web pages are Client Side Rendering(CSR), which makes Google bot very hard to do the indexing the first time it opens up a web page. CSR needs rendering to happen.
-Btw, the approach taken by CC is called Server Side Rendering(SSR). SSR does not necessarily need rendering to happen, which sometimes can be optional,  whether search engine crawlers will do rendering for SSR is implementation specific.
+Btw, SSR does not necessarily need rendering to happen, which sometimes can be optional,  whether search engine crawlers will do rendering for SSR is implementation specific.
 - Ranking => Ok, Google has found your webpage and has finished indexing it, but there are so many result pages associated with the keyword you want to target, how to make my web pages stand out? We will discuss it in the Ranking part.
 We will go over the four concepts in the next section, before moving on, we will introduce the HTML fundamentals here to get yourself familiarized with the whole technical context.
 
@@ -291,9 +291,6 @@ The sole dynamic.js actually does the heavy lifting under the hood
 You may have heard about the famous frontend framework like React, Vue or Angular.
 No matter which framework your frontend team uses, the final product is one or multiple Javascript files that render the web page dynamically.
 
-As an example, below is the project list page of TTCX.
-You can see that the web page is really contentful while the initial HTML content returned by the server is surprisingly simple. The javascript files actually do the heavy lifting to render the ultimate page.
-
 
 Q: Why do we call it Client Side Rendering?
 A:  The rendering logic is contained in the Javascript files . Once the browser finishes downloading the Javascript file, it executes the code inside Javascript files on the clients' end to render the final page. 
@@ -308,7 +305,6 @@ All these downsides can be perfectly solved by SSR.
 SSR
 As its name suggests, SSR renders the page on the server side and the initial content of the web page actually contains the whole HTML content.
 The user will see the first screen in a flash(no white screen) and Google bot will index the web page happily.
-Below is the initial content returned by the server for the home page of CC.
 
 
 Q: SSR is so good, why not use it everywhere?
@@ -332,10 +328,6 @@ Q: I see javascript files in SSR's server response, but I don't think they are n
 A: You might argue that since the full HTML content is returned by SSR's server, the Javascript files inside it seems redundant.
 Actually, for SSR pages, most of the code logic happens on the server side while some code logic can only be executed on the client side.
 Another reason is that Javascript files also registers event handlers on the fly, without which the users cannot interact with the web page.
-
-Q: Well, what shall we do for TTCX?
-A: The new home page as well as the partner profile related pages(Partner list page, Partner Detail page) will be SSR pages. In that sense, in the near future, those pages will be searchable on Google.
-Other pages in TTCX will be using CSR and should not be searchable on Google. For example, you will not want the project list page or project detail page for a specific advertiser to show up on Google's SERP.
 
 Q: Any recommended frameworks?
 A: Next.js and Gatsby for React and Nuxt.js for Vue.
@@ -545,7 +537,7 @@ For example, if pageA's PageRank is super high.
 If it only has 1 outbound link, its sole downstream web page will receive the full weight of it, which is very good for its own PageRank.
 If it has 100 outbound links,  then its downstream web pages will only receive 1/100 of its weight, offsetting the effect brought by the super high PageRank from pageA.
 As a result, 
-- PMs need to talk to the PSO team and also GBM team to add high quality inbound links to CC and TTCX. High quality here means we need inbound links from websites which already receive high traffic or have a good reputation in the industry such as BBC, Facebook, Twitter, etc. 
+- PMs need to talk to the operation team to add high quality inbound links. High quality here means we need inbound links from websites which already receive high traffic or have a good reputation in the industry such as BBC, Facebook, Twitter, etc. 
 - We can also have social media influencer help us promote our website in his/her tweets.
 - We can also try to add a new entry in Wikipedia since its weight is very high.
 - Internal links are also important, RDs should make sure internal connectivity is good for their own website. For example, make sure all internal links are connected in some way so that there is no "isolated island".
@@ -673,8 +665,7 @@ In order to achieve better web vital metrics, RDs should optimize code logic to
 #### Mobile friendly
 Google bot spawns two user agents for a specific web page, one for PC and one for mobile.
 In that sense, your web page will get a higher page rank if responsive design is applied.
-Most of the pages in CC are mobile friendly.
-The home page of TTCX is not mobile friendly.
+
 RDs and PMs should foresee the tradeoff of mobile-first development for longer and harder development experience.
 Nice to have
 Google provides the "search appearance" feature so that the user can be presented with a fancier search result. 
@@ -705,7 +696,7 @@ We have fixed some of the issues already but are still waiting for Google to do 
 
 Web site experience
 How well our web page is performing from Google's perspective.
-Web vital is a core metrics here . We are not doing a very good job for CC and we will fix issues one by one according to its suggestions.
+Web vital is a core metrics here.
 
 
 ### AHref
