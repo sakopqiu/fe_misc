@@ -1,4 +1,6 @@
-SEO in actionBackground
+#SEO in action
+
+## Background
 
 We tried to look back upon what we have done in the past and summarized all the best practices into an operationable manual here so that we can re-apply the same theory to future projects, e.g, TTCX.
 Note that
@@ -12,8 +14,8 @@ This doc will be split into parts:
 - Four pillars of optimization
 - How to measure our efforts?
 
-SEO Bascis
-SEO in a nutshell
+## SEO Bascis
+### SEO in a nutshell
 SEO stands for Search Engine Optimization. The goal of SEO is to create a strategy that will increase your ranking position in search engine results. The higher the ranking, the more organic traffic to your site, which ultimately leads to more business for you!
 
 The four pillars of SEO optimization consist of 
@@ -25,7 +27,8 @@ In short, most of the web pages are Client Side Rendering(CSR), which makes Goog
 Btw, the approach taken by CC is called Server Side Rendering(SSR). SSR does not necessarily need rendering to happen, which sometimes can be optional,  whether search engine crawlers will do rendering for SSR is implementation specific.
 - Ranking => Ok, Google has found your webpage and has finished indexing it, but there are so many result pages associated with the keyword you want to target, how to make my web pages stand out? We will discuss it in the Ranking part.
 We will go over the four concepts in the next section, before moving on, we will introduce the HTML fundamentals here to get yourself familiarized with the whole technical context.
-HTML
+
+### HTML
 In case you are new to HTML, here is a quick guide.
 HTML is the acronym for Hypertext Markup Language . The name may sound mysterious but actually it is similar to writing a Lark document or Markdown document.
 You write HTML code snippets by following some pre-defined rules and voila, the browser will generate a web page for you.
@@ -175,7 +178,8 @@ I assume you've understood everything, and for each web page, PMs should provide
 - og:url
 ```  
 Note that Open Graph tags are not used to improve SEO, but rather a way to provide the user with a more user friendly look&feel when forwarding or retweeting on social media network.
-CSS
+
+### CSS
 As described above, all tags under <head/> are invisible and all tags under <body/> are visible, the visible tags have default UI style according to the HTML specification.
 The default styles are only sufficient for prototyping, and when it comes to creating a fancier web page, we need to use CSS(Cascading style sheet).
 For example, the default style for any content inside <div> is 16px+black+system default font, while applying the CSS rule below will make it look differently.
@@ -216,7 +220,7 @@ RD prefers this form in most cases.
 ```
 That is all you need to know about CSS.
 
-Javascript
+### Javascript
 HTML content is static and plain, CSS gives its more colorful and fancier look&feel.
 Javascript is used to give it more dynamic behavior and enable user-interaction.
 We can use Javascript to dynamically add new contents, edit existing content or even remove contents from the HTML page.
@@ -265,7 +269,7 @@ document.body.appendChild(cc);
 ```
 That is all you need to know about Javascript.
 
-CSR
+### CSR
 CSR refers to Client Side Rendering. 
 This is the modern way of creating a dynamic web page and is adopted by many companies.
 ```  
@@ -337,7 +341,7 @@ Q: Any recommended frameworks?
 A: Next.js and Gatsby for React and Nuxt.js for Vue.
 I have written a doc about Next.js and its evolution history here.
 
-URL dissection
+### URL dissection
 You may have heard about the jargon protocol, domain, path and parameters, they are self-explainable through an easy example.
 Consider the urls:
 ```  
@@ -363,23 +367,25 @@ Parameters(or QueryString)
 3rd: ?a=123&b=222
  ```
   
-Other Jargons
-Outbound links
+### Other Jargons
+#### Outbound links
 <a/> links in a web page are called outbound links
-Inbound links
+#### Inbound links
 If pageA has an <a/> link pointing to pageB, we would say pageA has an outbound link to pageB
 and pageB has an inbound link from pageA.
-Backlinks
+#### Backlinks
 Another way to express inbound links.
-User agent
+#### User agent
 It is the software which is used to surf the internet.
 Chrome, Safari, Firefox are all user agents.
 Google bot is also a user agent.
 However, Google bot is actually a background program rather than a browser with user interface . Such user agents always refer to "headless browsers" or "headless user agent"
-Four Pillars of Optimization
+
+## Four Pillars of Optimization
 As we discussed briefly above, the four pillars of SEO optimizations are crawling, indexing, rendering and ranking, details will be delved into in this section.
 Note that the real mechanisms of each search engine are tremendously complex and distinct from each other, what we describe below is simply the general idea.
-Crawling
+
+### Crawling
 Search engines have a list of initial web pages(the most notable web pages known to all internet surfers) as its base for crawling . Let us call it the crawling queue. 
 The search engine iterates the crawling queue, takes the next task out of the queue, downloads its content and looks for <a/> tags within it. Since the href attribute of the <a/> tag refers to the url of the link, it adds the href attribute as a new task to the crawling queue. It will also index that page to its database, indexing will be discussed below.
 Think of the whole process in an recursive way and it is not hard to imagine that at the end of the day almost the whole world-wide-web will be crawled by the search engine, and that is why we call it a spider. The spider starts from a very small web and finally manages to weave a giant web holding the whole www world.
@@ -459,7 +465,7 @@ And if you want to view more partners, you have to click the "view more" button 
 Q: How to create sitemap for your website?
 A: Whenever you add a new path to your code base, you have to manually add the declaration in sitemap. However, this process is error-prone since you might forget to add configurations for some paths.
   
-Indexing
+### Indexing
 When google bot finds your web page, the HTML content will be scanned, and the bot tries to extract useful information from that web page and tries to create an inverted index in its database.
 This process is called indexing.
 Let us take a quick look at the html files below, suppose a.html is on the left side and b.html on the right.
@@ -489,7 +495,7 @@ Here are a few noteworthy points when Google scans your page :
 - Synonymous expressions are normalized in some way so that "How much" and "What is the price of" can be converted into a consistent expression in Google and, in a result, they are somewhat equivalent internally.
 - The keyword Iphone appears in many places in the HTML above and Google gives a different weight to each area. `<title>` and `<h1>` has higher priorities. 
 
-Rendering
+### Rendering
 First thing first, Rendering is optional.  It is only needed for CSR pages.
 If you still recall CSR and SSR, the initial content of the CSR is merely Javascript files declarations and the content is almost empty while SSR returns everything.
 For the dumb search engines, since the CSR pages are almost empty and non-exploitable, there is little point in indexing that page.
@@ -515,7 +521,7 @@ The below aspects are ordered by importance(Descending).
 - Better Web vital metrics.
 - Mobile friendly
 
-PageRank
+### PageRank
 How does Google rank pages that are associated with a specific keyword, say, "How to make delicious cake"?
 It uses Page Ranking. 
 Simply put, if there are 4 web pages in this world, A,B,C,D, all pages are given an initial rank as 1/4.
@@ -549,7 +555,7 @@ In addition, Google will also give higher page ranks according to the following 
   - Brand effect, inbound links from mass media such as Twitter and Facebook.
   - Paid ads, which is out of the scope of this doc.
 
-Contentful Web Page
+#### Contentful Web Page
 We have talked about this topic a lot in the prior paragraphs.
 We will simply give summrization here.
 - Be sure to declare all the useful meta info in the <header/> tag, we created a React Component in our Next.js project, just for your reference. Need RD's attention.
@@ -638,7 +644,7 @@ Avoid the following techniques:
 - Sending automated queries to Google 
 Simply put, write yourq copies and css code honestly. The end user should see what you intend to show them.
 
-Better Web Vitals
+#### Better Web Vitals
 Web vitals is a broad topic and I've covered this topic comprehensively from RD's perspective in another article. RD should pay more attention to this part.
 Briefly speaking,  Web Vitals is an initiative created by Google to provide unified guidance and metrics to measure end-user page experience on the web.
 Core Web Vitals is a subset of Web Vitals, and currently consists of three metrics that measure loading, interactivity, and visual stability. These metrics are Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
@@ -664,7 +670,7 @@ In order to achieve better web vital metrics, RDs should optimize code logic to
   - Make Javascript files async/defer if they are not related to rendering.
 - Refrain from using window.onunload and window.beforeunload since it will disable BFC.
 
-Mobile friendly
+#### Mobile friendly
 Google bot spawns two user agents for a specific web page, one for PC and one for mobile.
 In that sense, your web page will get a higher page rank if responsive design is applied.
 Most of the pages in CC are mobile friendly.
@@ -675,9 +681,9 @@ Google provides the "search appearance" feature so that the user can be presente
 This feature is nice to have and we plan to apply these techniques across the span of next year as p2 tasks.
 
 
-How to measure our efforts
+## How to measure our efforts
 This part is WIP.
-Google search console(GSC)
+### Google search console(GSC)
 GSC a tool provided by Google to help us know
 SERP results
 - Total impressions, higher impressions we are doing a good job in SEO.
@@ -687,7 +693,7 @@ SERP results
 
 Below are the most exhibited pages(ordered by desc).
 
-Coverage
+### Coverage
 GSC tell us 
 - how many pages are indexed by it 
 - how many pages are provided by sitemap but not indexed and the reason for that
@@ -702,7 +708,7 @@ How well our web page is performing from Google's perspective.
 Web vital is a core metrics here . We are not doing a very good job for CC and we will fix issues one by one according to its suggestions.
 
 
-AHref
+### AHref
 AHref is a super cool tool where you can see more metrics and even run audits for your web site.
 We are using it along with GSC to track down potential issues and tackle them one by one.
 Actually, there are so many useful tools that you need to figure out the usage by playing with it on your own.
