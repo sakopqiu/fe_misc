@@ -64,7 +64,7 @@ Don't be overwhelmed by the mysterious code as we will discuss them one-by-one.
      <img src="some-pic.jpg"/>
      <a href="www.google.com">Click me to go to google</a>
      <div>
-       Here is the main text about how to create Tiktok Creatives
+       Here is the main text about how to make cakes
        blahblah....
        blahblah....
        blahblah....
@@ -374,12 +374,11 @@ Robots.txt
 During the process of crawling, we may come across some pages that are not intended to be indexed. For example, the login/signup page, the pages that are only accessible after logging-in or require specific security permissions.
 To that end, we can declare the restrictions in a robots.txt file to specify which paths under which circumstances should not be crawled.
 Google stipulates that robots.txt be created on a per domain basis, which means:
-https://ads.tiktok.com=>https://ads.tiktok.com/robots.txt.
-https://business.tiktok.com=>https://business.tiktok.com/robots.txt.
+https://some.com=>https://some.com/robots.txt.
 
 Before google starts crawling a specific web page, it downloads the robots.txt file first and looks into it to make sure the path is crawlable.
-Suppose below is the content of  https://ads.tiktok.com/robots.txt.
-When the user-agent is Google bot, the web page https://ads.tiktok.com/signup is not crawlable.
+Suppose below is the content of  https://some.com/robots.txt.
+When the user-agent is Google bot, the web page https://some.com/signup is not crawlable.
 When the user-agent is Baidu bot, the whole domain is not crawable.
 User-agent: Googlebot
 Disallow: /signup/
@@ -389,8 +388,6 @@ Disallow: *
 
 RDs are responsible for creating robots.txt.
 noindex meta tag
-The interesting thing is that, since the domain https://ads.tiktok.com is shared by a plethora of teams in Bytedance, currently no one has created the robots.txt yet, which means accessing https://ads.tiktok.com/robots.txt will simply yield a 404 not found.
-You may also specify the crawable option in the meta tag. 
 <meta name="robots" content="noindex, nofollow" />
 
 RDs should be responsible for creating the meta tag.
@@ -403,24 +400,17 @@ The rough layout looks like
         xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>https://ads.tiktok.com/business/creativecenter</loc>
+        <loc>https://some.com/page1</loc>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://ads.tiktok.com/business/creativecenter/insight/creativeinsight/pc/en</loc>
+        <loc>https://some.com/page12</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://ads.tiktok.com/business/creativecenter/insight/topads/pc/en</loc>
-        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 </urlset>
 
-
-In case you are interested, this is the sitemap for Tiktok Creatice Center, open it in chrome's inspector tool.
 
 The sitemap file provides the search engine with information about all the crawable paths under that domain as well as the priority and frequency for that path.
 Q: What is priority and frequency?
@@ -510,7 +500,7 @@ The below aspects are ordered by importance(Descending).
 - Mobile friendly
 
 PageRank
-How does Google rank pages that are associated with a specific keyword, say, "TikTok creative center"?
+How does Google rank pages that are associated with a specific keyword, say, "How to make delicious cake"?
 It uses Page Ranking. 
 Simply put, if there are 4 web pages in this world, A,B,C,D, all pages are given an initial rank as 1/4.
 Page B has 3 outbound links and one of which points to PageA.
@@ -533,7 +523,7 @@ For example, if pageA's PageRank is super high.
 If it only has 1 outbound link, its sole downstream web page will receive the full weight of it, which is very good for its own PageRank.
 If it has 100 outbound links,  then its downstream web pages will only receive 1/100 of its weight, offsetting the effect brought by the super high PageRank from pageA.
 As a result, 
-- PMs need to talk to the PSO team and also GBM team to add high quality inbound links to CC and TTCX. High quality here means we need inbound links from websites which already receive high traffic or have a good reputation in the industry such as Tiktok, BBC, Facebook, Twitter, etc. 
+- PMs need to talk to the PSO team and also GBM team to add high quality inbound links to CC and TTCX. High quality here means we need inbound links from websites which already receive high traffic or have a good reputation in the industry such as BBC, Facebook, Twitter, etc. 
 - We can also have social media influencer help us promote our website in his/her tweets.
 - We can also try to add a new entry in Wikipedia since its weight is very high.
 - Internal links are also important, RDs should make sure internal connectivity is good for their own website. For example, make sure all internal links are connected in some way so that there is no "isolated island".
