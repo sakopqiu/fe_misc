@@ -101,12 +101,12 @@ For example, the below code snippet will render a hyperlink whose text is "googl
   ```
 
 `<h1>`
-Search engine regard the contents inside <h1> as the theme or main topic of the web page, so normally we need to put the desired search text in this element.
+Search engine regard the contents inside `<h1>` as the theme or main topic of the web page, so normally we need to put the desired search text in this element.
 For example, if the current web page discusses "Delicios cake" and your desired search key word is "how to use make Delicious cake" , then PM needs to provide copies which contain this information. 
 However, the content inside the <h1> tag should be natural and non-contrived, so how to coin the right phrase or organize the appropriate sentence is an art to be deeply considered.
 UI wise, <h1> is rendered as magnified text by default but we can use CSS to change its look-and-feel, so its appearance does not matter from Google's perspective.
-Q: I have also seen <h2>,<h3> all the way to <h6> . Are they also important?
-A: <h1> is the most important one for Google bot, while other <hx> tags are useful for it to understand the structure of your page, check this for more info.
+Q: I have also seen `<h2>`,`<h3>` all the way to `<h6>` . Are they also important?
+A: `<h1>` is the most important one for Google bot, while other <hx> tags are useful for it to understand the structure of your page, check this for more info.
 
 `<img>`
 This element  simply renders an image on the web page. src refers to the location where the image is located and the content in alt will be rendered only if the image is not found(AKA 404).
@@ -117,10 +117,10 @@ From google's perspective, alt contains the semantic content of the image. For e
 
 PMs need to give alt for all images on SEO-related web pages. 
 
-<div>
-<div> element is the most ominipotent tag in the HTML world since it can contain any visible content.
-That being said, <div> has no semantics since it can be used to show anything: the header, footer, sidbar, or even the main paragraph of the web page.
-When HTML5 specification came into play, it is stipulated that <div> elements be replaced by semantics tags such as <header>, <footer>, <section>, <aside>, etc for search engines to understand your web page better. So RDs should pay more attention to this part when writing code.
+`<div>`
+`<div>` element is the most ominipotent tag in the HTML world since it can contain any visible content.
+That being said, `<div>` has no semantics since it can be used to show anything: the header, footer, sidbar, or even the main paragraph of the web page.
+When HTML5 specification came into play, it is stipulated that <div> elements be replaced by semantics tags such as `<header>`, `<footer>`, `<section>`, `<aside>`, etc for search engines to understand your web page better. So RDs should pay more attention to this part when writing code.
 
 `<head>`
 It includes the meta info of that web page, all tags within <head/> are invisible to end users but include meta info of the page useful for Google to understand the page.
