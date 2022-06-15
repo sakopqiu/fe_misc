@@ -606,7 +606,7 @@ export default function CommonSeoNoIndexHead(props: CommonSeoNoIndexHeadProps) {
 }
 ```
   
-- Be sure to have 1 <h1/> for each web page. Need RD's attention but PM should give the copy.
+- Be sure to have 1 `<h1/>` for each web page. Need RD's attention but PM should give the copy.
 - Try your best to give each <img/> an alt property. Need RD's attention but PM should give the copy.
 - <hx> tags help Google bot understand the structure of your web page. Need RD's attention.
 - Try your best to use semantic tags like <header>, <footer/>, <article> instead of <div/>. Need RD's attention.
@@ -617,7 +617,7 @@ Need PMs to talk to the PSO team or GBM team to provide and supervise the conten
 Bid for long-tail keywords
 If you set the desired keyword to be "declicous cake", the concept is way too vague and there are too many competitors out there.
 Be more specific about your keywords.
-In practice, specify as concrete as possible in your <title/> and <h1/>
+In practice, specify as concrete as possible in your `<title/>` and `<h1/>`
 For example, "Delicious cake in Changning District".
 
 Don't Fool Google
