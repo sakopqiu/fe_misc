@@ -685,10 +685,6 @@ SERP results
 - CTR = Total clicks / Total impressions, higher CTR means that the description is enticing and users are willing to click on it.
 - Average position: Average position refers to the average position of your website in search results (calculated by the system using the highest position whenever your website appears in search results). 
 
-One thing to notice is that the average position is not very ideal, this is a little bit counter-intuitive.
-The reason for that is we are feeding Google a very large sitemap recently, so the number of keywords associated with Creatice Center has also exploded. 
-Some of the keywords are not so that important but did significantly affect the average position metric. We will look into this issue later to see how we can filter out the less relevant ones.
-
 Below are the most exhibited pages(ordered by desc).
 
 Coverage
