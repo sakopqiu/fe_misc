@@ -609,7 +609,7 @@ export default function CommonSeoNoIndexHead(props: CommonSeoNoIndexHeadProps) {
 - <hx> tags help Google bot understand the structure of your web page. Need RD's attention.
 - Try your best to use semantic tags like <header>, <footer/>, <article> instead of <div/>. Need RD's attention.
 - Try to only talk about one topic for each web page and be sure to provide high quality content.
-Need PMs to talk to the PSO team or GBM team to provide and supervise the content.
+Need PMs to talk to the operation team to provide and supervise the content.
 - Although the latest algorithm of Google Bot supports Passage Ranking, which is more friendly to articles containing several topics, it is out of the scope of our discussion since most of our articles only deal with one topic. 
 
 Bid for long-tail keywords
