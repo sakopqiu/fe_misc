@@ -34,6 +34,7 @@ You write HTML code snippets by following some pre-defined rules and voila, the 
   - self closing tag: <tag/>, most of which are descriptive tags used to express meta info of the web page. One of the exceptions is the <img/> tag, which we will see an example below.
 
 Tags are organized in an hierarchical way, in the example below
+```  
 <a> is the parent of <b> and <c/>, <b> and </c> are the children of <a>.
 <a> is the grandparent(ancestor) of <d/>.
 <d> is the offspring of <a/>.
@@ -43,7 +44,8 @@ Tags are organized in an hierarchical way, in the example below
   </b>
   <c/>
 </a>
-
+```
+  
 - Attributes:  any tag can contain multiple pre-defined attributes, for example
 <img src="some.jpg" alt="alt text if the image is not found" blahblah="aaa"/>
 
@@ -51,12 +53,13 @@ In this example, src and alt are predefined attributes for the <img> tag while b
 
 Let us take a quick look at a sample HTML code snippet to get some feelings.
 Don't be overwhelmed by the mysterious code as we will discuss them one-by-one.
+```
 <html>
   <head>
-     <title>Creative Center</title>  // only this tag within <head> is visible to end user
+     <title>Make cake/title>  // only this tag within <head> is visible to end user
      <link rel="canonical" href="https://somesite.com">
-     <meta name="description" content="description"/> 
-     <meta propety="og:title" content"article title"/>
+     <meta name="description" content="description about making cake"/> 
+     <meta propety="og:title" content"make cake"/>
      <meta propety="og:url" content"https://somesite.com"/>
   </head>
   <body>
@@ -81,9 +84,10 @@ Don't be overwhelmed by the mysterious code as we will discuss them one-by-one.
      </div>
   </body>
 </html>
-
+```
 
 HTML provides a huge amount of Tags and Attributes out of the box but we will only pay attention to the following ones which are pertinent to SEO optimization.
+```    
 <html>
 The root container of the whole web page.
 <body>
@@ -93,7 +97,8 @@ The tags below are all children under <body>
 <a> creates a hyperlink. 
 For example, the below code snippet will render a hyperlink whose text is "google" and the user will be taken to "www.google.com" when clicking it.
 <a href="www.google.com">google</a>
-
+</html>
+  ```
 
 <h1>
 Search engine regard the contents inside <h1> as the theme or main topic of the web page, so normally we need to put the desired search text in this element.
@@ -105,10 +110,10 @@ A: <h1> is the most important one for Google bot, while other <hx> tags are usef
 
 <img>
 This element  simply renders an image on the web page. src refers to the location where the image is located and the content in alt will be rendered only if the image is not found(AKA 404).
-<img src="some.jpg" alt="alternative text"
+`<img src="some.jpg" alt="alternative text"/>`
 
-From google's perspective, alt contains the semantic content of the image. For example, if the image's content is the Avatar of the creative partner "Vidmob", you can specify that information in alt for Google to know.
-<img src="avatar-4.jpg" alt="alt"/>
+From google's perspective, alt contains the semantic content of the image. For example, if the image's content is the Avatar of the famous cake shop "Super Cake", you can specify that information in alt for Google to know.
+`<img src="avatar-4.jpg" alt="alt"/>`
 
 PMs need to give alt for all images on SEO-related web pages. 
 
@@ -137,16 +142,16 @@ It can be used to import CSS files in most cases but in SEO's realm, it can be u
 
 For example, if you have different urls for the same web page, Google regard the two links as distinct and thus the rating for each page is cut down by half.  On the end-users' end, they will see two search results showing the same title and same description, which is confusing and redundant.
 This task is done by RD and is transparent to end users.
-
+```
 <meta>
 It contains the meta info of the web page, we will only go over  SEO-related properties below.
 - property = description
 <meta property="description" content="something you will see in SERP" />
-
+```
 
 The description is actually what you see on google's SERP. Its content should be succint(50 to 60 characters) while appealing, since it determines whether the user will click the link to your site when seeing it on the SERP.
 - property=keywords
-<meta property="keyword" content="how to make cake in shanghai" />
+`<meta property="keyword" content="how to make cake in shanghai" />`
 
 This property is the most abused and wrongly-used one. 
 The original purpose of the property, as the name suggests, is to correlate the keyword with the web pages. Nowadays, the search engine indexes web pages based on its own algorithm as described below, but declaring the keyword property seems to be more direct and intuitive.
@@ -171,7 +176,8 @@ CSS
 As described above, all tags under <head/> are invisible and all tags under <body/> are visible, the visible tags have default UI style according to the HTML specification.
 The default styles are only sufficient for prototyping, and when it comes to creating a fancier web page, we need to use CSS(Cascading style sheet).
 For example, the default style for any content inside <div> is 16px+black+system default font, while applying the CSS rule below will make it look differently.
-<html>
+```
+ <html>
   <style>
      div {
        color: blue;
@@ -183,11 +189,13 @@ For example, the default style for any content inside <div> is 16px+black+system
     <div>Hello world</div>
   </body>
 </html>
-
+```
+  
 CSS can be declared in two ways
 - Inserting code between the <style> tag, as shown above.
 - Writing rules in a separate file and referencing it as shown below. 
 RD prefers this form in most cases.
+```  
 // a.html
 <html>
   <link rel="stylesheet" href="some.css"/>
@@ -202,20 +210,21 @@ RD prefers this form in most cases.
        font-size: 24px;
        font-family: some-cool-font;
   }
-
+```
 That is all you need to know about CSS.
 
 Javascript
 HTML content is static and plain, CSS gives its more colorful and fancier look&feel.
 Javascript is used to give it more dynamic behavior and enable user-interaction.
 We can use Javascript to dynamically add new contents, edit existing content or even remove contents from the HTML page.
+```  
 <html>
   <body>
     <div>Hello world</div>
   </body>
   <script>
      const cc = document.createElement("div");
-     cc.innerHTML = "creative center";
+     cc.innerHTML = "make cake";
      document.body.appendChild(cc);
   </script>
 </html>
@@ -224,20 +233,21 @@ The above code snippet will finally render the below HTML,  and the red part is 
 <html>
   <body>
     <div>Hello world</div>
-    <div>creative center</div>
+    <div>Make cake</div>
   </body>
   <script>
      const cc = document.createElement("div");
-     cc.innerHTML = "creative center";
+     cc.innerHTML = "make cake;
      document.body.appendChild(cc);
   </script>
 </html>
-
+```
 Javascript can be declared in two ways
 - Inserting code between the <script> tag, as shown above.
 - Writing code in a separate file and referencing it as shown below.
 RD prefers this form in most cases.
 // this is the a.html
+```  
 <html>
   <body>
     <div>Hello world</div>
@@ -247,14 +257,15 @@ RD prefers this form in most cases.
 
 // this is some.js
 const cc = document.createElement("div");
-cc.innerHTML = "creative center";
+cc.innerHTML = "make cake";
 document.body.appendChild(cc);
-
+```
 That is all you need to know about Javascript.
 
 CSR
 CSR refers to Client Side Rendering. 
 This is the modern way of creating a dynamic web page and is adopted by many companies.
+```  
 <html>
   <head>
     ... contents are omiited for brevity
@@ -263,7 +274,8 @@ This is the modern way of creating a dynamic web page and is adopted by many com
      <script src="dynamic.js"></script>
   </body>
 </html>
-
+```
+  
 You might have noticed that the HTML above is very concise and looks very differently from the full example where <body> contains a lot of HTML tags.
 The sole dynamic.js actually does the heavy lifting under the hood
 - Create tags dynamically to create the structure of the page.
@@ -291,9 +303,6 @@ As its name suggests, SSR renders the page on the server side and the initial co
 The user will see the first screen in a flash(no white screen) and Google bot will index the web page happily.
 Below is the initial content returned by the server for the home page of CC.
 
-Q: Which pages are using SSR?
-A: The whole website of Creative Center is using the SSR solution.
-Only the home page of TTCX is using the SSR solution.
 
 Q: SSR is so good, why not use it everywhere?
 A: All good things come with a price, the maintenance cost of SSR pages is much higher than CSR ones. 
@@ -306,7 +315,6 @@ For SSR
 - If the content of the page is mostly static.
 - If you want to prevent users from seeing a blank page for a long time.
 - If the website is content-oriented, e.g. CMS systems or Methodology platforms.
-Actually Creative Center hit all 3 criteria above and SSR is a must.
 For CSR
 - If the first-screen time is not the key metric
 - If the content of the page is distinct for each user. 
@@ -329,6 +337,7 @@ I have written a doc about Next.js and its evolution history here.
 URL dissection
 You may have heard about the jargon protocol, domain, path and parameters, they are self-explainable through an easy example.
 Consider the urls:
+```  
 http://aa.com?a=123
 https://www.bb.com/
 https://cc.com/a/b/c?a=123&b=222
@@ -349,7 +358,8 @@ Parameters(or QueryString)
 1st: ?a=123
 2nd: empty string
 3rd: ?a=123&b=222
- 
+ ```
+  
 Other Jargons
 Outbound links
 <a/> links in a web page are called outbound links
@@ -396,6 +406,7 @@ As its name suggests, sitemap contains the internal structure of a specific doma
 Instead of having google find the specific web page using its <a/> link recursive strategy, we are telling google explicitly what pages we have.
 The syntax of the sitemap(XML file) is out of the scope of this doc and RDs should pay more attention to that.
 The rough layout looks like
+```  
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
@@ -410,7 +421,7 @@ The rough layout looks like
         <priority>0.9</priority>
     </url>
 </urlset>
-
+```
 
 The sitemap file provides the search engine with information about all the crawable paths under that domain as well as the priority and frequency for that path.
 Q: What is priority and frequency?
@@ -444,13 +455,14 @@ And if you want to view more partners, you have to click the "view more" button 
 
 Q: How to create sitemap for your website?
 A: Whenever you add a new path to your code base, you have to manually add the declaration in sitemap. However, this process is error-prone since you might forget to add configurations for some paths.
-We have summarized an auto way to generate sitemap for Creative Center. You may refer to our source code if you are also using Next.js.
+  
 Indexing
 When google bot finds your web page, the HTML content will be scanned, and the bot tries to extract useful information from that web page and tries to create an inverted index in its database.
 This process is called indexing.
 Let us take a quick look at the html files below, suppose a.html is on the left side and b.html on the right.
 
 Google scans both files and creates something like this,
+```  
 Keyword
 Found in
 Latest Iphone
@@ -462,7 +474,8 @@ Apple
 b.html
 How much latest iphone
 a.html
-
+```
+  
 Just imagine how big this table can become after google bot crawls most of the web pages in this world.
 The keyword "Iphone 10000" might point to millions of web pages, and that is why SEO optimization is so important to make your webpage not inundated by your peers.
 
@@ -537,6 +550,7 @@ Contentful Web Page
 We have talked about this topic a lot in the prior paragraphs.
 We will simply give summrization here.
 - Be sure to declare all the useful meta info in the <header/> tag, we created a React Component in our Next.js project, just for your reference. Need RD's attention.
+```  
 import Head from 'next/head';
 import React from 'react';
 
@@ -587,7 +601,8 @@ export default function CommonSeoNoIndexHead(props: CommonSeoNoIndexHeadProps) {
     </Head>
   );
 }
-
+```
+  
 - Be sure to have 1 <h1/> for each web page. Need RD's attention but PM should give the copy.
 - Try your best to give each <img/> an alt property. Need RD's attention but PM should give the copy.
 - <hx> tags help Google bot understand the structure of your web page. Need RD's attention.
@@ -597,7 +612,7 @@ Need PMs to talk to the PSO team or GBM team to provide and supervise the conten
 - Although the latest algorithm of Google Bot supports Passage Ranking, which is more friendly to articles containing several topics, it is out of the scope of our discussion since most of our articles only deal with one topic. 
 
 Bid for long-tail keywords
-If you set the desired keyword to be "creative" or "declicous cake", the concept is way too vague and there are too many competitors out there.
+If you set the desired keyword to be "declicous cake", the concept is way too vague and there are too many competitors out there.
 Be more specific about your keywords.
 In practice, specify as concrete as possible in your <title/> and <h1/>
 For example, "Delicious cake in Changning District".
@@ -666,7 +681,6 @@ SERP results
 - Total clicks,, higher clicks means that the description is enticing and users are willing to click on it.
 - CTR = Total clicks / Total impressions, higher CTR means that the description is enticing and users are willing to click on it.
 - Average position: Average position refers to the average position of your website in search results (calculated by the system using the highest position whenever your website appears in search results). 
-Below is the growth curve after we started SEO optimization for Creative Center
 
 One thing to notice is that the average position is not very ideal, this is a little bit counter-intuitive.
 The reason for that is we are feeding Google a very large sitemap recently, so the number of keywords associated with Creatice Center has also exploded. 
