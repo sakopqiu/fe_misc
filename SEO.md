@@ -47,7 +47,7 @@ Tags are organized in an hierarchical way, in the example below
 ```
   
 - Attributes:  any tag can contain multiple pre-defined attributes, for example
-<img src="some.jpg" alt="alt text if the image is not found" blahblah="aaa"/>
+`<img src="some.jpg" alt="alt text if the image is not found" blahblah="aaa"/>`
 
 In this example, src and alt are predefined attributes for the <img> tag while blahblah is not, so it will be simply ignored by the browser.
 
@@ -100,7 +100,7 @@ For example, the below code snippet will render a hyperlink whose text is "googl
 </html>
   ```
 
-<h1>
+`<h1>`
 Search engine regard the contents inside <h1> as the theme or main topic of the web page, so normally we need to put the desired search text in this element.
 For example, if the current web page discusses "Delicios cake" and your desired search key word is "how to use make Delicious cake" , then PM needs to provide copies which contain this information. 
 However, the content inside the <h1> tag should be natural and non-contrived, so how to coin the right phrase or organize the appropriate sentence is an art to be deeply considered.
@@ -108,7 +108,7 @@ UI wise, <h1> is rendered as magnified text by default but we can use CSS to cha
 Q: I have also seen <h2>,<h3> all the way to <h6> . Are they also important?
 A: <h1> is the most important one for Google bot, while other <hx> tags are useful for it to understand the structure of your page, check this for more info.
 
-<img>
+`<img>`
 This element  simply renders an image on the web page. src refers to the location where the image is located and the content in alt will be rendered only if the image is not found(AKA 404).
 `<img src="some.jpg" alt="alternative text"/>`
 
@@ -122,23 +122,24 @@ PMs need to give alt for all images on SEO-related web pages.
 That being said, <div> has no semantics since it can be used to show anything: the header, footer, sidbar, or even the main paragraph of the web page.
 When HTML5 specification came into play, it is stipulated that <div> elements be replaced by semantics tags such as <header>, <footer>, <section>, <aside>, etc for search engines to understand your web page better. So RDs should pay more attention to this part when writing code.
 
-<head> 
+`<head>`
 It includes the meta info of that web page, all tags within <head/> are invisible to end users but include meta info of the page useful for Google to understand the page.
-The tags below are all children tags under <head>
-<title>
-<title> is as important as <h1/> as it influences ranking significantly.
+The tags below are all children tags under `<head>`
+  
+`<title>`
+`<title>` is as important as <h1/> as it influences ranking significantly.
 This tag includes the text which can be shown on the tab. 
 
  And it is also useful when displaying results in google's SERP.
 
-<link>
+`<link>`
 This tag is a versatile one. 
 It can be used to import CSS files in most cases but in SEO's realm, it can be used to de-duplicate repetitive pages.
 // www.a.com/id=1 and www.a.com/name=shoes targets the same destination
 // and we want to make id=1 as canonical
 // insert the code snippet below in your web page.
 
-<link rel="canonical" href="www.a.com/id=1" />
+`<link rel="canonical" href="www.a.com/id=1" />`
 
 For example, if you have different urls for the same web page, Google regard the two links as distinct and thus the rating for each page is cut down by half.  On the end-users' end, they will see two search results showing the same title and same description, which is confusing and redundant.
 This task is done by RD and is transparent to end users.
@@ -161,16 +162,18 @@ As of 2009, Google opted out of using this property and many other search engine
 Yandex(The Russian Search Engine) still takes a look at this property as a reference but its priority is very low.
 The usage of this property is discouraged.
 
-- property="og:xxx"
+- `property="og:xxx"`
 OpenGraph Tags(og for short)
 The Open Graph protocol enables any web page to become a rich object in a social graph. For instance, this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook.
 The excerpt above seems a little bit abstract, see the self-descriptive picture below
 
 I assume you've understood everything, and for each web page, PMs should provide rds with
+```
 - og:image
 - og:url
 - og:title
 - og:url
+```  
 Note that Open Graph tags are not used to improve SEO, but rather a way to provide the user with a more user friendly look&feel when forwarding or retweeting on social media network.
 CSS
 As described above, all tags under <head/> are invisible and all tags under <body/> are visible, the visible tags have default UI style according to the HTML specification.
