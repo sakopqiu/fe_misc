@@ -30,7 +30,7 @@ In case you are new to HTML, here is a quick guide.
 HTML is the acronym for Hypertext Markup Language . The name may sound mysterious but actually it is similar to writing a Lark document or Markdown document.
 You write HTML code snippets by following some pre-defined rules and voila, the browser will generate a web page for you.
 - Tags: e.g. <a>, <img>, <body>,<meta>, a specific tag has two forms
-  - normal tag: <tag>content inside</tag>, content inside of it will be rendered on the web page in some way.  e.g, <h1>some content</h1>, <div>some content2</div>
+  - normal tag: <tag>content inside</tag>, content inside of it will be rendered on the web page in some way.  e.g, `<h1>some content</h1>`, <div>some content2</div>
   - self closing tag: <tag/>, most of which are descriptive tags used to express meta info of the web page. One of the exceptions is the <img/> tag, which we will see an example below.
 
 Tags are organized in an hierarchical way, in the example below
@@ -127,7 +127,7 @@ It includes the meta info of that web page, all tags within <head/> are invisibl
 The tags below are all children tags under `<head>`
   
 `<title>`
-`<title>` is as important as <h1/> as it influences ranking significantly.
+`<title>` is as important as `<h1/>` as it influences ranking significantly.
 This tag includes the text which can be shown on the tab. 
 
  And it is also useful when displaying results in google's SERP.
@@ -487,7 +487,7 @@ Here are a few noteworthy points when Google scans your page :
 - Variant of a specific word is normalized, e.g, plurals, conjugations might be treated as the normal form of the word. 
 - How google separates English words or phrases is out of the scope of this doc, so the table above might not be accurate, but you get the idea.
 - Synonymous expressions are normalized in some way so that "How much" and "What is the price of" can be converted into a consistent expression in Google and, in a result, they are somewhat equivalent internally.
-- The keyword Iphone appears in many places in the HTML above and Google gives a different weight to each area. <title> and <h1> has higher priorities. 
+- The keyword Iphone appears in many places in the HTML above and Google gives a different weight to each area. `<title>` and `<h1>` has higher priorities. 
 
 Rendering
 First thing first, Rendering is optional.  It is only needed for CSR pages.
