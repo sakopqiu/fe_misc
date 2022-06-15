@@ -1,4 +1,4 @@
-#SEO in action
+# SEO in action
 
 ## Background
 
